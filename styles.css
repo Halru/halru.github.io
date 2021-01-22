@@ -10,6 +10,16 @@ p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+pre {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
 a {
     font-family: 'Courier New', Courier, monospace;
+}
+
+a.link {
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    color:royalblue;
 }
