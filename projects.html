@@ -1,115 +1,187 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="styles.css">
-    <!-- Bootstrap CSS -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="icon" href="/img/rin.jpg">
-    <title>bktsim</title>
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <link rel="icon" href="img/Icon.png">
+  <title>projects</title>
+</head>
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html" style="margin-right: 2em;">
+    <img src="img/Icon.png" width="50" height="50" style="margin: 5%;" >
+    bktsim </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="index.html">home</a>
+      <a class="nav-item nav-link active" href="projects.html"><u>projects</u><span class="sr-only">(current)</span></a>
+    </div>
+  </div>
+</nav>
+
+
+<body>
+  <br>
+
+  <div class="container-fluid main-frame">
+    <hr>
+
+    <div class="row mt-4">
+      <div class="col-4 d-flex justify-content-center p-5" style="margin-right: 1%;">
+        <img src="img/Icon.png">
+      </div>
+      <div class="col-6">
+        <h2> Personal Portfolio </h2>
+        <b style="font-size: large;"> This website that you are looking at right now! </b>
+        <hr>
+        <p>I created this website so that:
+          <li> I can showcase my projects (using this page) in a less boring way. </li>
+          <li> I can get a opportunity to learn and use HTML, CSS, JavaScript and potentially, React. </li>
+          <li> I can put fun, JavaScript based projects onto this website! (I am planning to make MineSweeper). </li>
+          <li> I can send people this link and tell them that I made this website.. isn't that so cool!? </li>
+        </p> 
+
+        <br>
+        <p> The key skills demonstrated in this project are:
+          <li> Use and understanding of basic HTML, CSS, and JavaScript to make an interactive website. </li>
+          <lI> Using external resources, such as Bootstrap to create a website. </lI>
+        </p>
+        
+        <p style="color:gray; font-size: small; margin-bottom: 0%;"> Technologies Used: HTML, CSS, JavaScript, Bootstrap, Visual Studio Code </p>
+        <p style="color:gray; font-size: small; margin-bottom: 0%;"> Skills Demonstrated: Building a website, understanding basic website components </p>
+        <a href="https://github.com/bktsim/bktsim.github.io" style="font-size: small; margin-top: 0%;"> Link to the Github repository here </a>
+      </div>
+      
+
+    </div>
+
+    <hr>
+    <div class="row mt-4">
+      <div class="col-4" style="margin-right: 1%;">
+        <div class="container-fluid">
+          <div class = "row d-flex justify-content-center border-light p-4">
+            <img id="ReviewerImage" src="img/reviewer/Reviewer1.png" class="img-fluid my-auto justify-content-center">
+          </div>
+          
+          <script>
+            var count = 1;
+            const images = 4;
+            const image = document.getElementById("ReviewerImage");
+
+            function onClickReviewer(i) {
+              if (i > 0 && count + 1 <= images) {
+                count += 1
+              } else if (i > 0 && count + 1 > images) {
+                count = 1
+              } else if (i < 0 && count - 1 >= 1) {
+                count -= 1
+              } else {
+                count = 4
+              }
+              image.src = "img/reviewer/Reviewer" + count + ".png";
+            };
+          </script>
+          <div class = "row d-flex justify-content-center ">
+            <button type="button" class="btn btn-primary" onclick=onClickReviewer(-1)> View previous image </button>
+            <p>&nbsp; &nbsp; &nbsp;&nbsp;</p>
+            <button type="button" class="btn btn-primary" onclick=onClickReviewer(1)> View next image </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-6">
+        <h2> Reviewer </h2>
+        <b style="font-size: large;"> UBC CPSC 210 - Software Construction Project </b>
   
-  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">
-        bktsim </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="index.html">home</a>
-        <a class="nav-item nav-link active" href="projects.html">projects<span class="sr-only">(current)</span></a>
+        <br>
+        <hr>
+  
+        <p> Reviewer is a flashcard application designed to replace traditional flashcards.
+          <li> Users are able to create flashcards digitally and store them in decks. </li>
+          <li> Users are able to review their flashcards in decks and attain mastery based on whether content is
+            recalled. </li>
+          <li> Users are able to add and remove cards from decks. </li>
+          <li> Users are able to save and load their decks on the application. </li>
+        </p>
+
+        <br>
+
+        <p> The project is fully graded by TAs and developed using a test-driven development process. The key skills
+          demonstrated are:
+          <li> Design and production of software using object oriented programming and test-driven development from user
+            stories. </li>
+          <li> Using Java Swing to create GUI interfaces </li>
+          <li> Handling of files - storing and parsing data stored in JSON format. </li>
+          <li> Creating UML Class Diagrams and locating potential refactoring necessary to increase cohesion & reduce
+            coupling. </li>
+        </p>
+
+        <p style="color:gray; font-size: small; margin-bottom: 0%;"> Technologies Used: Java, JUnit, IntelliJ IDEA </p>
+        <p style="color:gray; font-size: small; margin-bottom: 0%;"> Skills Demonstrated: Object-Oriented Programming,
+          Test-Driven Development, Parsing JSON, reading files </p>
+        <a href="https://github.com/bktsim/reviewer" style="font-size: small; margin-top: 0%;"> Link to the Github repository here </a>
+      </div>
+
+      <br>
+      <br>
+    </div>
+  
+  <hr>
+
+    <div class="row mt-4">
+      <div class="col-4 d-flex justify-content-center p-4" style="margin-left: 1%;">
+        <img src="img/notifier/CourseNotifier.png" class="img-fluid my-auto" style="margin: 3%;">
+      </div>
+      
+      <div class="col-6">
+        <h2> Course Notifier </h2>
+        <b style="font-size: large;"> A handy tool made to solve a real life problem that I ran into. </b>
+
+        <br>
+        <hr>
+      
+        <p> Course Notifier is an application designed to allow students to be notified whenever there is a seat in one of
+          their desired courses.
+          <li> Users are able to list the courses that they are interseted in (as objects) </li>
+          <li> Users are able to get notified (via. a Discord ping) whenever a seat is available. </li>
+          <br>
+          The program was created in both Python and Google Apps Script (basically JavaScript). It can technically be ran
+          via a Trigger on Google Apps Script,
+          but this is currently not very viable due to the restrictions placed by Google Apps Script, limiting Trigger
+          runtimes per 24 hours. Hence, the program
+          was recreated in Python - so it can be ran locally on a user's computer.
+        </p>
+      
+        <br>
+      
+        <p> The key skills demonstrated are:
+          <li> Design and production of software using object oriented programming. </li>
+          <li> Interacting and interpreting web data (GET, POST requests) and parsing HTML via CSS Selectors </li>
+          <li> Interacting with libraries (DiscordWebhook, Cheerio) and incorporating them into the software. </li>
+        </p>
+      
+        <p style="color:gray; font-size: small; margin-bottom: 0%;"> Technologies Used: Python, Google Apps Script, Discord,
+          <a href="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?"> SelectorGadet </a>
+        </p>
+        <p style="color:gray; font-size: small; margin-bottom: 0%;"> Skills Demonstrated: Object-Oriented Programming,
+          Interacting with web data, Interacting with libraries </p>
+        <a href="https://github.com/bktsim/courses-notifier" style="font-size: small; margin-top: 0%;"> Link to the Github repository here </a>
+
       </div>
     </div>
-  </nav>
 
-
-  <body>
-      <br>
-      
-      <div class="container-fluid main-frame">
-          <hr>
-          <div class = "row mt-4">
-
-              <div class="col-4 text-center" style="margin-right: 1%;">
-                    <img src="img/reviewer/Reviewer1.png" class="rounded mx-auto d-block">
-              </div>
-
-              <div class = "col-6">
-                  <h2> Reviewer </h2>
-
-                  <b style="font-size: large;"> UBC CPSC 210 - Software Construction Project </b>
-
-                  <br>
-                  <hr>
-
-                  <p> Reviewer is a flashcard application designed to replace traditional flashcards. 
-                      <li> Users are able to create flashcards digitally and store them in decks. </li>
-                      <li> Users are able to review their flashcards in decks and attain mastery based on whether content is recalled. </li>
-                      <li> Users are able to add and remove cards from decks. </li>
-                      <li> Users are able to save and load their decks on the application. </li> 
-                  </p>
-
-                  <br>
-
-                  <p> The project is fully graded by TAs and developed using a test-driven development process. The key skills demonstrated are:
-                      <li> Design and production of software using object oriented programming and test-driven development from user stories. </li> 
-                      <li> Using Java Swing to create GUI interfaces </li>
-                      <li> Handling of files - storing and parsing data stored in JSON format. </li>
-                      <li> Creating UML Class Diagrams and locating potential refactoring necessary to increase cohesion & reduce coupling. </li> 
-                  </p>
-                  
-                  <p style="color:gray; font-size: small; margin-bottom: 0%;"> Technologies Used: Java, JUnit, IntelliJ IDEA </p>
-                  <p style="color:gray; font-size: small; margin-bottom: 0%;"> Skills Demonstrated: Object-Oriented Programming, Test-Driven Development, Parsing JSON, reading files </p>
-                  <a href="https://github.com/bktsim/reviewer" style="font-size: small; margin-top: 0%;"> Link to the repository here </a>
-                  <br>
-                  <br>
-              </div>
-           </div>
-         </div>
-         <hr>
-         <div class = "row mt-4">
-
-            <div class="col-4 text-center" style="margin-right: 1%;">
-                  
-            </div>
-
-            <div class = "col-6">
-                <h2> Course Notifier </h2>
-
-                <b style="font-size: large;"> Personal Project </b>
-
-                <br>
-                <hr>
-
-                <p> Course Notifier is an application designed to allow students to be notified whenever there is a seat in one of their desired courses. 
-                    <li> Users are able to list the courses that they are interseted in (as objects) </li>
-                    <li> Users are able to get notified (via. a Discord ping) whenever a seat is available. </li>
-                    <br>
-                    The program was created in both Python and Google Apps Script (basically JavaScript). It can technically be ran via a Trigger on Google Apps Script,
-                    but this is currently not very viable due to the restrictions placed by Google Apps Script, limiting Trigger runtimes per 24 hours. Hence, the program
-                    was recreated in Python - so it can be ran locally on a user's computer.
-                </p>
-
-                <br>
-
-                <p> The key skills demonstrated are:
-                    <li> Design and production of software using object oriented programming. </li>
-                    <li> Interacting and interpreting web data (GET, POST requests) and parsing HTML via CSS Selectors </li> 
-                    <li> Interacting with libraries (DiscordWebhook, Cheerio) and incorporating them into the software. </li>
-                </p>
-                
-                <p style="color:gray; font-size: small; margin-bottom: 0%;"> Technologies Used: Python, Google Apps Script, Discord, 
-                    <a href="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?"> SelectorGadet </a> </p>
-                <p style="color:gray; font-size: small; margin-bottom: 0%;"> Skills Demonstrated: Object-Oriented Programming, Interacting with web data, Interacting with libraries </p>
-                <a href="https://github.com/bktsim/courses-notifier" style="font-size: small; margin-top: 0%;"> Link to the repository here </a>
-                <br>
-                <br>
-            </div>
-            <hr>
-      </div>
-  </body>
+    <hr>
+    <!-- Next project div here -->
+  </div>
+</body>
 </html>
