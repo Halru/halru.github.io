@@ -14,7 +14,7 @@
 </head>
 
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html" style="margin-right: 2em;">
+  <a class="navbar-brand" href="index" style="margin-right: 2em;">
     <img src="img/Icon.png" width="50" height="50" style="margin: 5%;" >
     bktsim </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -23,8 +23,8 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="index.html">home</a>
-      <a class="nav-item nav-link active" href="projects.html"><u>projects</u><span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="index">home</a>
+      <a class="nav-item nav-link active" href="projects"><u>projects</u><span class="sr-only">(current)</span></a>
     </div>
   </div>
 </nav>
@@ -38,7 +38,7 @@
 
     <div class="row mt-4">
       <div class="col-4 d-flex justify-content-center p-5" style="margin-right: 1%;">
-        <img src="img/Icon.png">
+        <img src="img/Icon.png" class="img-fluid my-auto">
       </div>
       <div class="col-6">
         <h2> Personal Portfolio </h2>
@@ -70,7 +70,7 @@
       <div class="col-4" style="margin-right: 1%;">
         <div class="container-fluid">
           <div class = "row d-flex justify-content-center border-light p-4">
-            <img id="ReviewerImage" src="img/reviewer/Reviewer1.png" class="img-fluid my-auto justify-content-center">
+            <img onclick=onClickReviewer(1) id="ReviewerImage" src="img/reviewer/Reviewer1.png" class="img-fluid my-auto justify-content-center">
           </div>
           
           <script>
@@ -92,9 +92,7 @@
             };
           </script>
           <div class = "row d-flex justify-content-center ">
-            <button type="button" class="btn btn-primary" onclick=onClickReviewer(-1)> View previous image </button>
-            <p>&nbsp; &nbsp; &nbsp;&nbsp;</p>
-            <button type="button" class="btn btn-primary" onclick=onClickReviewer(1)> View next image </button>
+            <p> Click on the image to see previews of the application! </p>
           </div>
         </div>
       </div>
